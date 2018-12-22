@@ -8,13 +8,27 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: BaseViewController {
+    @IBOutlet weak var remaindersTableView: UITableView!
+    
+    @IBOutlet weak var monthAndMonthDayLabel: UILabel!
+    @IBOutlet weak var weekdayNameLabel: UILabel!
+    var remainderDataSource = RemainderDataSource(remainderList: [])
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        remaindersTableView.dataSource = remainderDataSource
+        remaindersTableView.delegate = remainderDataSource
+        getRemainderList()
+    }
+    func getRemainderList(){
+        APIManager().getRemainders(currentViewController: self, context: remaindersTableView).done {json in
+            self.remainderDataSource.update(with: json.results!)
+            self.remaindersTableView.reloadData()
+        }
     }
 
 
 }
+
 
