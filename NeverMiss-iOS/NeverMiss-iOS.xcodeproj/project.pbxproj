@@ -81,7 +81,10 @@
 		DF2DC72D21CE6AAB003C128F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				DF2DC72521CE693B003C128F /* Constants.swift */,
+				DFB58F4121CE4C9800719609 /* NeverMissExtensions.swift */,
 				DF2DC72E21CE6ABE003C128F /* LoadingExtensions.swift */,
+				DF2DC72B21CE6A56003C128F /* Reachability.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -117,27 +120,56 @@
 		DF4EB1A521CE3F00009744C7 /* NeverMiss-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				DFFBB64821D1307600E9166A /* Data Source */,
+				DFFBB64721D1305D00E9166A /* View Controller */,
+				DFFBB64621D1304700E9166A /* api */,
+				DFFBB64521D1302B00E9166A /* Views */,
 				DF2DC73021CE72C9003C128F /* Models */,
 				DF2DC72D21CE6AAB003C128F /* Extensions */,
 				DF4EB1A621CE3F00009744C7 /* AppDelegate.swift */,
-				DF4EB1A821CE3F00009744C7 /* ViewController.swift */,
-				DF2DC73921CE7ABF003C128F /* RemainderDataSource.swift */,
-				DF2DC73721CE7A22003C128F /* RemainderCell.swift */,
 				DF4EB1AA21CE3F00009744C7 /* Main.storyboard */,
 				DF4EB1AD21CE3F01009744C7 /* Assets.xcassets */,
 				DF4EB1AF21CE3F01009744C7 /* LaunchScreen.storyboard */,
 				DF4EB1B221CE3F01009744C7 /* Info.plist */,
+			);
+			path = "NeverMiss-iOS";
+			sourceTree = "<group>";
+		};
+		DFFBB64521D1302B00E9166A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DF2DC73721CE7A22003C128F /* RemainderCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DFFBB64621D1304700E9166A /* api */ = {
+			isa = PBXGroup;
+			children = (
+				DF2DC72721CE6963003C128F /* NeverMissApiClient.swift */,
+				DF2DC72921CE69F0003C128F /* ApiManager.swift */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		DFFBB64721D1305D00E9166A /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DF4EB1A821CE3F00009744C7 /* ViewController.swift */,
 				DF4EB1B821CE419D009744C7 /* BaseViewController.swift */,
-				DFB58F4121CE4C9800719609 /* NeverMissExtensions.swift */,
 				DFB58F4321CE4EE800719609 /* LoginViewController.swift */,
 				DF2DC72121CE53D1003C128F /* RegisterViewController.swift */,
 				DF2DC72321CE61BF003C128F /* AddTaskViewController.swift */,
-				DF2DC72521CE693B003C128F /* Constants.swift */,
-				DF2DC72721CE6963003C128F /* NeverMissApiClient.swift */,
-				DF2DC72921CE69F0003C128F /* ApiManager.swift */,
-				DF2DC72B21CE6A56003C128F /* Reachability.swift */,
 			);
-			path = "NeverMiss-iOS";
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		DFFBB64821D1307600E9166A /* Data Source */ = {
+			isa = PBXGroup;
+			children = (
+				DF2DC73921CE7ABF003C128F /* RemainderDataSource.swift */,
+			);
+			path = "Data Source";
 			sourceTree = "<group>";
 		};
 		E0305334F51F9A5912291DAE /* Pods */ = {
